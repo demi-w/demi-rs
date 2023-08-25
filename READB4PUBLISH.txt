@@ -1,0 +1,6 @@
+currently using node as my "adapter" (read: web hosting).
+consider others as well
+
+Also probably want to use deferred transitions when loading modal
+
+also svelte-img seems very useful

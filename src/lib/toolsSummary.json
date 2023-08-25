@@ -1,0 +1,57 @@
+[
+    {
+        "name" : "C++",
+        "isLanguage" : true,
+        "url" : "cpp" 
+    },
+    {
+        "name" : "C#",
+        "isLanguage" : true,
+        "url" : "csharp"
+    },   
+    {
+        "name" : "GitHub",
+        "isLanguage" : false
+    },    
+    {
+        "name" : "HTML/CSS",
+        "url" : "html",
+        "isLanguage" : true
+        
+    },    
+    {
+        "name" : "JavaScript",
+        "url" : "js",
+        "isLanguage" : true
+    },    
+    {
+        "name" : "Python",
+        "isLanguage" : true
+    },    
+    {
+        "name" : "Rust",
+        "isLanguage" : true
+    },
+    {
+        "name" : "WebGL",
+        "isLanguage" : false
+    },
+    {
+        "name" : "Socket.io",
+        "isLanguage" : false,
+        "url" : "socketio"
+    },
+    {
+        "name" : "Node.js",
+        "isLanguage" : false,
+        "url" : "nodejs"
+    },
+    {
+        "name" : "Matplotlib",
+        "isLanguage" : false
+    },
+    {
+        "name" : "LaTeX",
+        "isLanguage" : true
+    }
+]

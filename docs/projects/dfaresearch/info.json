@@ -1,0 +1,9 @@
+{
+    "name" : "DFA Research",
+    "location" : "ssu",
+    "date" : {
+        "start" : "2023-01-23",
+        "end" : "present"
+    },
+    "tools" : ["rust"]
+}

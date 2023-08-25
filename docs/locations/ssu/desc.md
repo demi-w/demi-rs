@@ -1,0 +1,5 @@
+wish I
+*went to*
+**A school**
+***WITH FEWER SEXUAL ASSAULT CHARGES LEVELED ON STAFF AND PRESIDENTS***
+oh well

@@ -1,0 +1,9 @@
+{
+    "name" : "3 Years War",
+    "location" : "me",
+    "date" : {
+        "start" : "2020-06-01",
+        "end" : "2020-09-01"
+    },
+    "tools" : ["js","webgl","socketio","nodejs","github"]
+}

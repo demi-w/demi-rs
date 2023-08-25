@@ -1,0 +1,3 @@
+want clicking on location in project modal to send to timeline
+want clicking on language in project modal to remove location filter
+might want to display a message

@@ -1,0 +1,1 @@
+<div class="h-px my-2 bg-gradient-to-r from-transparent via-teal-800 to-transparent w-full" />
