@@ -62,7 +62,7 @@ class Project {
     location : Location;
     tools : Tool[];
     vBanner : string;
-    constructor(name : string, url : string, markdown : string, where : Location ,tools : Tool[], date : String, endDate? : String) {
+    constructor(name : string, url : string, markdown : string, where : Location ,tools : Tool[], date : String, endDate? : String, demoUrl? : String) {
         this.name = name;
         this.url = url;
         this.markdown = markdown;
@@ -81,6 +81,7 @@ class Project {
             this.dateStr = this.dateStr + " - " + month[this.endDate.getMonth()] + " " + this.endDate.getFullYear().toString();
           }
       }
+      this.demoUrl = demoUrl;
     }
 }
 for(let i = 0; i < toolsJSON.length; i++) {
@@ -96,9 +97,9 @@ let sillyJS = Object.keys(locationsJSON)
 for(let i = 0; i < sillyJS.length; i++) {
     let curLocale = locationsJSON[sillyJS[i]];
     if (typeof curLocale["date"] === 'string') {
-        new Location(curLocale["name"],curLocale["url"],curLocale["markdown"],curLocale["date"]);
+        new Location(curLocale["name"],curLocale["url"],curLocale["markdown"],curLocale["date"],null,curLocale["demo"]);
     } else {
-        new Location(curLocale["name"],curLocale["url"],curLocale["markdown"],curLocale["date"]["start"],curLocale["date"]["end"]);
+        new Location(curLocale["name"],curLocale["url"],curLocale["markdown"],curLocale["date"]["start"],curLocale["date"]["end"],curLocale["demo"]);
     }
 }
 //console.log(ttools)
