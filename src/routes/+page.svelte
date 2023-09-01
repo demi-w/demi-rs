@@ -11,10 +11,22 @@
     import TestTimeline from "./Timeline.svelte";
 
     let headerInView = false;
-
+    /*
+    chosenProject.subscribe((value) =>
+    {
+        if(value != null) {
+            document.body.style.position = 'fixed';
+            document.body.style.top = `-${window.scrollY}px`;
+        } else {
+            const scrollY = document.body.style.top;
+            document.body.style.position = '';
+            document.body.style.top = '';
+            window.scrollTo(0, parseInt(scrollY || '0') * -1);
+        }
+    })*/
 </script>
 <Svrollbar />
-
+<svelte:body style={"position:fixed"} />
 <!--containg the whole page in this div for modal scroll lock-->
 <div transition:scale class="text-center m-top-8">
     <h1 class="text-center text-6xl">Demi Willison</h1>

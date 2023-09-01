@@ -15,7 +15,7 @@
   </div>
   
   <div id="timeline" class="flex max-lg:flex-col font-sans w-full my rounded-md">
-      <div class="flex-none relative lg:w-1/4 max-lg:h-48">
+      <div class="flex-none relative lg:w-1/4 max-lg:h-48 overflow-x-hidden">
         {#key wheelPos}
         <img in:fly={{ x:lastDecreasing ? "-100%" : "100%", duration: 800, opacity : 1 }}
         out:fly={{ x: lastDecreasing ? "100%" : "-100%", duration: 800 , opacity : 1}}
@@ -30,7 +30,7 @@
             <div class="flex flex-col flex-wrap">
                 <div class="flex w-full justify-between">
                     <button on:click={()=>{wheelPos -= 1; if (wheelPos == -1) {wheelPos=locationWheel.length-1};lastDecreasing = true}} class="block z-10">
-                    <svg class="h-8 flex-shrink-0 aspect-square p-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
+                    <svg class="h-8 flex-shrink-0 aspect-square px-2 py-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 1 1.3 6.326a.91.91 0 0 0 0 1.348L7 13"/>
                       </svg>
                     </button>
@@ -40,7 +40,7 @@
                         <div in:fly={{  x: lastDecreasing ? "-4rem" : "4rem", duration: 300, delay: 300 }}
                     
                         out:fly={{  x: lastDecreasing ? "4rem" : "-4rem", duration: 300 }} class="mx-2" style="grid-row:1/1; grid-column:1/1">
-                            <span class="text-3xl">
+                            <span class="max-sm:text-2xl sm:text-3xl">
                                 {locationWheel[wheelPos].name}
                             </span>
                             <span class="mx-1"></span>
@@ -48,7 +48,7 @@
                         </div>
                         {/key}
                         <div class="mx-2 invisible" style="grid-row:1/1; grid-column:1/1">
-                            <span class="text-3xl">
+                            <span class="max-sm:text-2xl sm:text-3xl">
                                 {locationWheel[1].name}
                             </span>
                             <span class="mx-1"></span>
@@ -56,7 +56,7 @@
                         </div>
                     </div>
                     <button on:click={()=>{wheelPos = (wheelPos + 1) % locationWheel.length; lastDecreasing = false} } class="block ">
-                    <svg class="h-8 flex-shrink-0 aspect-square p-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
+                    <svg class="h-8 flex-shrink-0 aspect-square px-2 py-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1"/>
                       </svg>
                     </button>

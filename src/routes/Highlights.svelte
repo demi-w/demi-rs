@@ -1,5 +1,5 @@
 <script>
-    import { tools , knownLanguages, chosenProject, chosenTool, chosenLocation, projects } from "$lib/stores";
+    import { tools , knownLanguages, chosenProject, chosenTool, chosenLocation, projects, locations } from "$lib/stores";
     import Icon from "./Icon.svelte";
     import HighlightPanel from "./HighlightPanel.svelte";
     import * as animateScroll from "svelte-scrollto";
@@ -44,7 +44,7 @@
     </HighlightPanel>
     <HighlightPanel>
         <span slot = "title">
-            5 Years of Work Experience
+            {new Date(new Date() - locations["lsa"].date).getFullYear() - 1970} Years of Work Experience
         </span>
         <span slot="body"> Working in the field since 2018 at three positions.  </span>
         <a on:click={() => animateScroll.scrollTo({element: '#timeline'})} slot ="link">
