@@ -6,7 +6,7 @@ pure JS and WebGL canvas. In doing so, I signed myself up for the common folly o
 
 # Features 
 
-- Online Multiplayer and Basic Matchmaking (using socket.io)
+- Online Multiplayer and Basic Matchmaking (using socket.io & Node.js)
 - Replay System
 - Both optimized via a deterministic logic engine seperated from rendering, taking cues from Rollback-based systems
 - Various necesary game engine prefabs, including:
