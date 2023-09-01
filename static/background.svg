@@ -1,0 +1,21 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>Layer 1</title>
+  <ellipse stroke-dasharray="2,2" stroke-width="0" ry="25.5" rx="25.5" id="svg_2" cy="102.5" cx="641.5" stroke="#000" fill="#ffffff"/>
+  <ellipse stroke-dasharray="2,2" stroke-width="0" ry="13.5" rx="13.5" id="svg_3" cy="233.5" cx="151.5" stroke="#000" fill="#ffffff"/>
+  <ellipse stroke-dasharray="2,2" stroke-width="0" ry="11.5" rx="11.5" id="svg_4" cy="102.5" cx="192.5" stroke="#000" fill="#ffffff"/>
+  <ellipse stroke-dasharray="2,2" stroke-width="0" ry="17.5" rx="17.5" id="svg_5" cy="420.5" cx="258.5" stroke="#000" fill="#ffffff"/>
+  <ellipse stroke-dasharray="2,2" stroke-width="0" ry="8" rx="8" id="svg_6" cy="165" cx="423" stroke="#000" fill="#ffffff"/>
+  <ellipse stroke-dasharray="2,2" stroke-width="0" ry="8" rx="8" id="svg_7" cy="241" cx="690" stroke="#000" fill="#ffffff"/>
+  <path id="svg_8" d="m627,451z" opacity="undefined" stroke-dasharray="2,2" stroke-width="0" stroke="#000" fill="#ffffff"/>
+  <ellipse stroke-dasharray="2,2" stroke-width="0" ry="8" rx="8" id="svg_9" cy="276" cx="312" stroke="#000" fill="#ffffff"/>
+  <ellipse stroke-dasharray="2,2" stroke-width="0" ry="8" rx="8" id="svg_10" cy="337" cx="468" stroke="#000" fill="#ffffff"/>
+  <ellipse stroke-dasharray="2,2" stroke-width="0" ry="8" rx="8" id="svg_11" cy="165" cx="423" stroke="#000" fill="#ffffff"/>
+  <ellipse stroke-dasharray="2,2" stroke-width="0" ry="13.5" rx="13.5" id="svg_12" cy="281.5" cx="588.5" stroke="#000" fill="#ffffff"/>
+  <ellipse stroke-dasharray="2,2" stroke-width="0" ry="17.5" rx="17.5" id="svg_13" cy="531.5" cx="695.5" stroke="#000" fill="#ffffff"/>
+  <ellipse stroke-dasharray="2,2" stroke-width="0" ry="8" rx="8" id="svg_14" cy="493" cx="87" stroke="#000" fill="#ffffff"/>
+  <ellipse stroke-dasharray="2,2" stroke-width="0" ry="13.5" rx="13.5" id="svg_15" cy="442.5" cx="432.5" stroke="#000" fill="#ffffff"/>
+  <ellipse stroke-dasharray="2,2" stroke-width="0" ry="25.5" rx="25.5" id="svg_16" cy="398.5" cx="634.5" stroke="#000" fill="#ffffff"/>
+ </g>
+</svg>
