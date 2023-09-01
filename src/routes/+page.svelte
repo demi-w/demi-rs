@@ -26,7 +26,6 @@
     })*/
 </script>
 <Svrollbar />
-<svelte:body style={"position:fixed"} />
 <!--containg the whole page in this div for modal scroll lock-->
 <div transition:scale class="text-center m-top-8">
     <h1 class="text-center text-6xl">Demi Willison</h1>
