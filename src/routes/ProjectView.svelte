@@ -17,7 +17,7 @@
 
 </script>
 
-<div class="text-center m-top-8" id="projects">
+<div class="text-center mt-8" id="projects">
     <h1 class="text-center text-4xl">
         Showing projects made using 
         <InlineDropdown bind:selectedObject={$chosenTool} defaultName="Any tool" objectList={tools} />
@@ -29,8 +29,8 @@
 
 <div class="w-full grid grid-rows-6 grid-cols-3 md:grid-cols-6 md:grid-rows-3 md:h-[30rem] lg:h-[52rem] align-top">
 {#each relevantProjects as project (project.url)}
-    <button animate:flip={{duration:400}} transition:fade on:click={() => {chosenProject.set(project)}} class="rounded-xl w-full text-center px-5% text-xl p-5">
-        <img class="rounded-3xl mb-2 max-w-full w-full align-middle border-none aspect-square object-cover" src={"projects\\"+ project.url + "\\icon.png"} alt={project.name} loading="lazy"/>
+    <button animate:flip={{duration:400}} transition:fade on:click={() => {chosenProject.set(project)}} class="rounded-xl w-full text-center px-5% text-xl max-sm:px-2 max-sm:mx-3 sm:px-5  sm:py-5">
+        <img class="rounded-3xl sm:mb-2 max-w-full w-full align-middle border-none aspect-square object-cover" src={"projects\\"+ project.url + "\\icon.png"} alt={project.name} loading="lazy"/>
         {project.name}
     </button>
 {/each}

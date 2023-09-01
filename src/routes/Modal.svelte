@@ -24,18 +24,18 @@
 
 	
 	<!-- svelte-ignore a11y-no-static-element-interactions -->
-	<div on:click|stopPropagation class="flex flex-col sm:flex-row sm:overflow-hidden">
-		<div class="flex-none max-sm:h-48 sm:w-1/4 relative">
+	<div on:click|stopPropagation class="flex flex-col lg:flex-row lg:overflow-hidden">
+		<div class="flex-none max-lg:h-48 lg:w-1/4 relative">
 			<slot name = "image"/>
 		</div>
 		
-		<div class="flex-grow max-h-96 pt-4 sm:px-4 ">
+		<div class="flex-grow max-h-[36rem] pt-4 sm:px-4 box-border">
 			<div class = "flex justify-between flex-nowrap px-3 -mt-1 pb-2">
 				<slot name="header" />
 				<!-- svelte-ignore a11y-autofocus -->
 				<button class="font-semibold text-xl" autofocus on:click={() => dialog.close()}>X</button>
 			</div>
-		<Svroller height="95%" width="100%" class="px-3">
+		<Svroller height="95%" width="100%">
 			<div class="mx-4 pb-3 overflow-scroll">
 
 			<slot />

@@ -1,1 +1,3 @@
-localizes your search appeal
+LSA is a smaller company with 4 employees at time of writing, which gave me a large variety of work as I was one half of the entire operations team. This meant that there were times that I was directly responsible for a lot of site infrastructure: at many points being the sole maintainer for many of the 200+ websites under their purview, doing social media posting, using photoshop to modify site graphics and finally working to automate some of the processes that were the most time-consuming through web scraping and automated HTTP messages.
+
+Throughout most of this work, I was given almost complete autonomy over what tools were used and how I completed the task. From that I gained a very practical appreciation for meeting the goals of a project by the most effective means, and not over or underengineering a solution to them.

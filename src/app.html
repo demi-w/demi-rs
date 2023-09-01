@@ -6,7 +6,20 @@
 		<meta name="viewport" content="width=device-width" />
 		%sveltekit.head%
 	</head>
-	<body data-sveltekit-preload-data="hover" class = "bg-slate-950 text-slate-50 py-10" >
-		<div style="display: contents">%sveltekit.body%</div>
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-7V9EXZ8HHS"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-7V9EXZ8HHS');
+	</script>
+
+	<body data-sveltekit-preload-data="hover" class = "bg-black text-slate-50 py-10" >
+		<!--<img src="background.svg" style="width:100%; z-index: -100; position: absolute; transform: translateZ(-10px); filter: blur(4px); opacity: 0.4;"> -->
+		<div style="display: contents;">%sveltekit.body%</div>
+		
 	</body>
 </html>

@@ -2,11 +2,16 @@
     export let item;
     export let isTool;
     import { chosenTool, chosenLocation} from "$lib/stores";
+    import * as animateScroll from "svelte-scrollto";
     function onClick() {
         if (isTool) {
             chosenTool.set(item);
+            chosenLocation.set(null);
+            animateScroll.scrollTo({element : "#projects"});
         } else {
             chosenLocation.set(item);
+            chosenTool.set(null);
+            animateScroll.scrollTo({element : "#projects"});
         }
     }
 </script>

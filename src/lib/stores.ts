@@ -1,14 +1,18 @@
-import SvelteMarkdown from 'svelte-markdown'
 import { writable } from 'svelte/store';
 import * as animateScroll from "svelte-scrollto";
 import locationsJSON from '$lib/locationsSummary.json';
 import projectsJSON from '$lib/projectsSummary.json';
 import toolsJSON from '$lib/toolsSummary.json';
-import { P } from 'flowbite-svelte';
-export const subpages = ["About Me", "Highlights", "Timeline", "Projects"];
+export const subpages = ["Highlights", "About Me", "Timeline", "Projects"];
 
-
-
+/*
+had a plan to only scroll to subpages when they are visible but frnakly idk
+let subpageVisible = {};
+for(let i = 0; i < subpages.length; i++) {
+    subpageVisible["#"+subpages[i].replace(/\s/g,'').toLowerCase()] = writable(false);
+}
+export let subpagesVisible = subpageVisible;
+*/
 animateScroll.setGlobalOptions({
     offset: -60,
 })
@@ -33,6 +37,7 @@ class Location {
         }else {
             this.dateStr = month[this.date.getMonth()] + " " + this.date.getFullYear().toString();
             if (endDate != null) {
+                
                 this.endDate = new Date(endDate);
                 this.dateStr = this.dateStr + " - " + month[this.endDate.getMonth()] + " " + this.endDate.getFullYear().toString();
               }
@@ -97,9 +102,9 @@ let sillyJS = Object.keys(locationsJSON)
 for(let i = 0; i < sillyJS.length; i++) {
     let curLocale = locationsJSON[sillyJS[i]];
     if (typeof curLocale["date"] === 'string') {
-        new Location(curLocale["name"],curLocale["url"],curLocale["markdown"],curLocale["date"],null,curLocale["demo"]);
+        new Location(curLocale["name"],curLocale["url"],curLocale["markdown"],curLocale["date"],null,curLocale["demoUrl"]);
     } else {
-        new Location(curLocale["name"],curLocale["url"],curLocale["markdown"],curLocale["date"]["start"],curLocale["date"]["end"],curLocale["demo"]);
+        new Location(curLocale["name"],curLocale["url"],curLocale["markdown"],curLocale["date"]["start"],curLocale["date"]["end"],curLocale["demoUrl"]);
     }
 }
 //console.log(ttools)
@@ -147,17 +152,19 @@ chosenProject.subscribe((value) => {
 chosenTool.subscribe((value) => {
     console.log("tool changed to",value);
     chosenProject.set(null);
+    /*
     if(value != null) {
         animateScroll.scrollTo({element : "#projects"});
-    }
+    }*/
     
 })
 
 chosenLocation.subscribe((value) => {
     console.log("location changed to",value);
     chosenProject.set(null);
+    /*
     if(value != null) {
         animateScroll.scrollTo({element : "#projects"});
-    }
+    }*/
 
 })

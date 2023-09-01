@@ -8,23 +8,21 @@
     import { scrollto } from "svelte-scrollto";
     import Timeline from "./Timeline.svelte";
     import { scale } from "svelte/transition";
+    import TestTimeline from "./Timeline.svelte";
 
     let headerInView = false;
-    let screenWidth;
-    let screenHeight;
-    $: vMode = screenHeight > screenWidth;
 
 </script>
-<svelte:window bind:innerWidth={screenWidth} bind:innerHeight={screenHeight} />
 <Svrollbar />
+
 <!--containg the whole page in this div for modal scroll lock-->
 <div transition:scale class="text-center m-top-8">
     <h1 class="text-center text-6xl">Demi Willison</h1>
     <InView bind:isInViewProp={headerInView}>
-        <h2>did you know I work on the computer? </h2>
+        <h2>Contact me at <span>dem</span>iwi<span>llison@g</span>mail.com </h2>
     </InView>
 </div> 
-<div class="p-2 flex items-center justify-center bg-slate-950" class:sticky={!headerInView} class:top-0={!headerInView} class:z-50={!headerInView}>
+<div class="p-2 flex items-center justify-center bg-black" class:sticky={!headerInView} class:top-0={!headerInView} class:z-50={!headerInView}>
 {#each subpages as subpage}
     <a use:scrollto={"#"+subpage.toLowerCase().replace(/\s/g, '')} class = "p-1 hover:text-white text-slate-200">
         {subpage}
@@ -36,9 +34,8 @@
 </div>
 
 <Highlights />
-<Timeline />
 <AboutMe />
-
+<Timeline />
 <ProjectView />
 <!--
     wouldn't it have been really cool if this worked ? :(

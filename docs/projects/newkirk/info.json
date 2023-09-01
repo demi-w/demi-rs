@@ -1,6 +1,6 @@
 {
     "name" : "Newkirk Award",
     "location" : "ssu",
-    "date" : {"start":"2020-01-01", "end":"2020-07-01"},
+    "date" : {"start":"2020-01-02", "end":"2020-07-02"},
     "tools" : ["python","matplotlib","cpp","latex","github"]
 }
