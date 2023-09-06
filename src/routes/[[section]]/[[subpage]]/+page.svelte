@@ -12,27 +12,36 @@
     import {onMount } from 'svelte';
     let headerInView = false;
     export let data;
+    let hasMounted = false;
     onMount(() => {
-        if(data.section != null) {
-            animateScroll.scrollTo({element : "#"+data.section});
+        hasMounted = true;
+    })
+    $: {
+        if(data.section != null && hasMounted) {
+            
             if(data.subpage != null) {
                 switch(data.section) {
                     case "timeline":
-                        console.log("we don't have that ech yet lol");
+                        console.log("we don't have that tech yet lol");
                         break;
                     case "projects":
                         $chosenProject = projects[data.subpage];
                 }
+            } else {
+                animateScroll.scrollTo({element : "#"+data.section});
+                $chosenProject = null;
             }
+        } else if (hasMounted) {
+            $chosenProject = null;
         }
-
-    })
-    /*
-    chosenProject.subscribe((value) =>
+    }
+    //enabling re-routing without any fanagling
+    /*chosenProject.subscribe((value) =>
     {
         if(value != null) {
-            document.body.style.position = 'fixed';
-            document.body.style.top = `-${window.scrollY}px`;
+            const newUrl = new URL("");
+            newUrl?.searchParams?.set('hello', 'world');
+            goto(newUrl);
         } else {
             const scrollY = document.body.style.top;
             document.body.style.position = '';
@@ -59,7 +68,6 @@
     <meta property="og:image" content="https://demi.rs/locations/me/banner.png"/>
     {/if}
 </svelte:head>
-
 <Svrollbar />
 <!--containg the whole page in this div for modal scroll lock-->
 <div transition:scale class="text-center m-top-8">
@@ -70,7 +78,7 @@
 </div> 
 <div class="p-2 flex items-center justify-center bg-black" class:sticky={!headerInView} class:top-0={!headerInView} class:z-50={!headerInView}>
 {#each subpages as subpage}
-    <a use:scrollto={"#"+subpage.toLowerCase().replace(/\s/g, '')} class = "p-1 hover:text-white text-slate-200">
+    <a data-sveltekit-noscroll href={"/"+subpage.toLowerCase().replace(/\s/g, '')} class = "p-1 hover:text-white text-slate-200">
         {subpage}
     </a>
     {#if subpage != subpages[subpages.length - 1]}

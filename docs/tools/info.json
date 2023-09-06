@@ -53,5 +53,9 @@
     {
         "name" : "LaTeX",
         "isLanguage" : true
+    },
+    {
+        "name" : "MySQL",
+        "isLanguage" : true
     }
 ]

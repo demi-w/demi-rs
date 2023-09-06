@@ -5,14 +5,14 @@ import projectsJSON from '$lib/projectsSummary.json';
 import toolsJSON from '$lib/toolsSummary.json';
 export const subpages = ["Highlights", "About Me", "Timeline", "Projects"];
 
-/*
-had a plan to only scroll to subpages when they are visible but frnakly idk
-let subpageVisible = {};
+
+//read urls
+let tSubpageUrls = [];
 for(let i = 0; i < subpages.length; i++) {
-    subpageVisible["#"+subpages[i].replace(/\s/g,'').toLowerCase()] = writable(false);
+    tSubpageUrls.push(subpages[i].replace(/\s/g,'').toLowerCase());
 }
-export let subpagesVisible = subpageVisible;
-*/
+export let subpageUrls = tSubpageUrls;
+
 animateScroll.setGlobalOptions({
     offset: -60,
 })

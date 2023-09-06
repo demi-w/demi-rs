@@ -8,8 +8,6 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
     color-scheme: dark;
-
-
 }
 
 .markdown h1 {
@@ -64,7 +62,7 @@
 
 
 @layer components {
-    a {
+    a:not(#hidden-link) {
         @apply text-teal-300 underline cursor-pointer select-none hover:text-teal-200;
     }
 }

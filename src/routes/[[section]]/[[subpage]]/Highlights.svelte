@@ -18,7 +18,7 @@
             {/if}
             {/each}
         </div>
-        <a on:click={() => {chosenTool.set(null); chosenLocation.set(null); animateScroll.scrollTo({element: '#projects'})}} slot ="link">
+        <a data-sveltekit-noscroll href="/projects" on:click={() => {chosenTool.set(null); chosenLocation.set(null);}} slot ="link">
             Explore a list of all my projects >
         </a>
     </HighlightPanel>
@@ -29,7 +29,7 @@
         <div slot="body"> 
             As freshmen, my colleague and I co-created 2 units of curriculum for Sonoma State University's Computer Applications for Scientists (PHYS 381). PHYS 381 is currently a mandatory upper-division class for Physics majors.
         </div>
-        <a on:click={() => {chosenProject.set(projects['newkirk']) }} slot ="link">
+        <a data-sveltekit-noscroll href="/projects/newkirk" slot ="link">
             Read more about the grant >
         </a>
     </HighlightPanel>
@@ -38,7 +38,7 @@
             Working on Research
         </span>
         <span slot="body"> Developed a polynomial-time solution to a previously exponential problem. Originally created as my senior capstone, Dr. Ravikumar and I have continued to pursue it and plan to submit the work to conferences. </span>
-        <a on:click={() => {chosenProject.set(projects['dfaresearch']) }} slot ="link">
+        <a data-sveltekit-noscroll href="projects/dfaresearch" slot ="link">
             Read more about our research >
         </a>
     </HighlightPanel>
@@ -47,7 +47,7 @@
             {new Date(new Date() - locations["lsa"].date).getFullYear() - 1970} Years of Work Experience
         </span>
         <span slot="body"> Working in the field since 2018 at three positions.  </span>
-        <a on:click={() => animateScroll.scrollTo({element: '#timeline'})} slot ="link">
+        <a data-sveltekit-noscroll href="/timeline" slot ="link">
             Explore my work timeline >
         </a>
     </HighlightPanel>

@@ -6,6 +6,7 @@
 	let dialog; // HTMLDialogElement
 
 	import { chosenProject } from '$lib/stores';
+    import { goto } from '$app/navigation';
 
 	$: if (dialog && showModal == $chosenProject) {
 		dialog.showModal() 
@@ -17,7 +18,7 @@
 <!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
 <dialog
 	bind:this={dialog}
-	on:close={() => (chosenProject.set(null))}
+	on:close={() => (goto("/", {noScroll : true}))}
 	on:click|self={() => {dialog.close()}}
 	class="rounded-3xl bg-gradient-to-r from-slate-900/50 to-slate-950/50 text-slate-50 w-full"
 	>

@@ -5,9 +5,9 @@ As much as it pains me to admit it (and as much as I've forced it on friends and
 The program I've created can build a DFA to tell you whether or not a puzzle is solvable. To do this (in extreme summary), it finds out whether or not billions of boards are solvable. Doing this efficiently has been the name of the game, and it's proven to be a super novel and interesting optimization problem. The simplest solution to this is using BFS, which has horrific performance. Naive BFS on **one** of the longer boards takes so much RAM the process eventually crashes (with 16GB of RAM), and it takes an hour to get there. As a consequence, many orders of magnitude worth of memory/time optimization were required.
 
 Current performance stats:
-- 98% of boards solved via linear-time method (completely skipping any BFS)
-- average of ***1.16 MICROSECONDS*** taken to solve a board (time taken to a solve a board also independent of board length)
+- average of ***1.16 MICROSECONDS*** taken to solve a board
 - Solved 310,094,073 boards in ~6 minutes
+- 98% of boards solved via linear-time method (completely skipping any BFS)
 - Never exceeded 40mb of RAM in the process
 
 Solutions I've builtto solve this challenge (all in Rust):

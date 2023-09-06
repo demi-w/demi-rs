@@ -1,5 +1,6 @@
 {
     "name" : "Spring Simulation",
+    "desc" : "Interactive Spring/Softbody simulation. Made using WebGL and Three.js.",
     "location" : "ssu",
     "date" : "2022-05-18",
     "tools" : ["js","webgl","github"],

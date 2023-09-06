@@ -1,5 +1,6 @@
 {
     "name" : "Go Fish: Definitive Edition",
+    "desc" : "Multiplayer Go Fish game with bot support. Made with WebGL and Socket.io",
     "location" : "ssu",
     "date" : "2021-05-11",
     "tools" : ["js","webgl","socketio","nodejs"],
