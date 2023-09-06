@@ -7,7 +7,7 @@
 <div class="flex flex-col sm:flex-row max-xl:items-center justify-center text-center pt-2 basis-full max-xl:flex-wrap" id="highlights">
     <HighlightPanel>
         <span slot ="title">
-            Comfortable with {knownLanguages} Languages
+            Profcient with {knownLanguages} Languages
         </span>
         <div slot ="body" class = "flex flex-wrap items-center justify-evenly min-w-fit">
             {#each Object.keys(tools) as tool} 
@@ -24,10 +24,10 @@
     </HighlightPanel>
     <HighlightPanel>
         <span slot = "title">
-            Developed Cirriculum For SSU
+            College Curriculum Development
         </span>
         <div slot="body"> 
-            Co-created 10 weeks of cirriculum for Computer Applications for Scientists (PHYS 381). PHYS 381 is currently a mandatory upper-division class for Physics majors. Completed as a freshman. 
+            As freshmen, my colleague and I co-created 2 units of curriculum for Sonoma State University's Computer Applications for Scientists (PHYS 381). PHYS 381 is currently a mandatory upper-division class for Physics majors.
         </div>
         <a on:click={() => {chosenProject.set(projects['newkirk']) }} slot ="link">
             Read more about the grant >

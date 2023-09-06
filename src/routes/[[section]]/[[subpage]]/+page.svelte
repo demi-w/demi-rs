@@ -1,6 +1,6 @@
 <script>
     import AboutMe from "./AboutMe.svelte";
-    import {chosenProject, subpages} from "$lib/stores.ts";
+    import {chosenProject, subpages, projects} from "$lib/stores.ts";
     import InView from "$lib/InView.svelte";
     import ProjectView from "./ProjectView.svelte";
     import { Svrollbar } from 'svrollbar';
@@ -8,9 +8,25 @@
     import { scrollto } from "svelte-scrollto";
     import Timeline from "./Timeline.svelte";
     import { scale } from "svelte/transition";
-    import TestTimeline from "./Timeline.svelte";
-
+    import * as animateScroll from "svelte-scrollto";
+    import {onMount } from 'svelte';
     let headerInView = false;
+    export let data;
+    onMount(() => {
+        if(data.section != null) {
+            animateScroll.scrollTo({element : "#"+data.section});
+            if(data.subpage != null) {
+                switch(data.section) {
+                    case "timeline":
+                        console.log("we don't have that ech yet lol");
+                        break;
+                    case "projects":
+                        $chosenProject = projects[data.subpage];
+                }
+            }
+        }
+
+    })
     /*
     chosenProject.subscribe((value) =>
     {
@@ -25,6 +41,25 @@
         }
     })*/
 </script>
+
+<svelte:head>
+    {#if data.section == "projects" && data.subpage != null}
+    <meta property="title" content={projects[data.subpage].name+" - Demi W."}/>
+    <meta property="description" content={projects[data.subpage].desc}/>
+    <meta property="og:image" content={"https://demi.rs/projects/"+data.subpage+"/icon.png"}/>
+    <meta property="og:title" content={projects[data.subpage].name+" - Demi W."}/>
+    <meta property="og:description" content={projects[data.subpage].desc}/>
+    <meta property="og:image" content={"https://demi.rs/projects/"+data.subpage+"/icon.png"}/>
+    {:else}
+    <meta property="title" content="Demi Willison's Portfolio Site"/>
+    <meta property="description" content="Isn't she so eminently cool and hirable?"/>
+    <meta property="image" content="https://demi.rs/locations/me/banner.png"/>
+    <meta property="og:title" content="Demi Willison's Portfolio Site"/>
+    <meta property="og:description" content="Isn't she so eminently cool and hirable?"/>
+    <meta property="og:image" content="https://demi.rs/locations/me/banner.png"/>
+    {/if}
+</svelte:head>
+
 <Svrollbar />
 <!--containg the whole page in this div for modal scroll lock-->
 <div transition:scale class="text-center m-top-8">

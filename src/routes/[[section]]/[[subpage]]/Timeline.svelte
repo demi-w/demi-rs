@@ -19,7 +19,7 @@
         {#key wheelPos}
         <img in:fly={{ x:lastDecreasing ? "-100%" : "100%", duration: 800, opacity : 1 }}
         out:fly={{ x: lastDecreasing ? "100%" : "-100%", duration: 800 , opacity : 1}}
-        src={"locations/"+locationWheel[wheelPos].url+"/banner.png"} alt="" class="absolute w-full h-full object-cover -z-20" loading="lazy" />
+        src={"/locations/"+locationWheel[wheelPos].url+"/banner.png"} alt="" class="absolute w-full h-full object-cover -z-20" loading="lazy" />
         {/key}
         <div class="that-one-gradient"></div>
         <div class="that-other-gradient"></div>

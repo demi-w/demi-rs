@@ -9,7 +9,7 @@
 	export let project;
 </script>
 <Modal bind:showModal={project}>
-	<img slot="image" src={"projects/"+project.url+"/banner.png"} alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+	<img slot="image" src={"/projects/"+project.url+"/banner.png"} alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
 	<h2 class="text-2xl font-semibold" slot="header">{project.name}</h2>
 	
 	<div class="flex justify-between flex-wrap">

@@ -67,8 +67,9 @@ class Project {
     location : Location;
     tools : Tool[];
     vBanner : string;
-    constructor(name : string, url : string, markdown : string, where : Location ,tools : Tool[], date : String, endDate? : String, demoUrl? : String) {
+    constructor(name : string, desc : string, url : string, markdown : string, where : Location ,tools : Tool[], date : String, endDate? : String, demoUrl? : String) {
         this.name = name;
+        this.desc = desc;
         this.url = url;
         this.markdown = markdown;
         this.location = where;
@@ -123,9 +124,9 @@ for(let i = 0; i < sillyJS.length; i++) {
     //console.log(rtools);
     //curProject["tools"].map((e) => {return ttools[e]});
     if (typeof curProject["date"] === 'string') {
-        new Project(curProject["name"],curProject["url"],curProject["markdown"], tlocations[curProject["location"]],rtools,curProject["date"]);
+        new Project(curProject["name"], curProject["desc"],curProject["url"],curProject["markdown"], tlocations[curProject["location"]],rtools,curProject["date"]);
     } else {
-        new Project(curProject["name"],curProject["url"],curProject["markdown"], tlocations[curProject["location"]],rtools,curProject["date"]["start"],curProject["date"]["end"]);
+        new Project(curProject["name"], curProject["desc"],curProject["url"],curProject["markdown"], tlocations[curProject["location"]],rtools,curProject["date"]["start"],curProject["date"]["end"]);
     }
     
 }

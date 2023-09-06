@@ -1,5 +1,6 @@
 {
     "name" : "3 Years War",
+    "desc" : "Online competitive board game using WebGL and Socket.io",
     "location" : "me",
     "date" : {
         "start" : "2020-06-02",

@@ -1,5 +1,6 @@
 {
     "name" : "Newkirk Award",
+    "desc" : "Development of mandatory upper-division cirriculum for SSU Physics. Made as freshman.",
     "location" : "ssu",
     "date" : {"start":"2020-01-02", "end":"2020-07-02"},
     "tools" : ["python","matplotlib","cpp","latex","github"]
