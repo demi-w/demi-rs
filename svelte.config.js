@@ -21,7 +21,7 @@ const config = {
 			strict: true
 		  }),
 		prerender: {
-			entries: ["/projects/downdetector"],
+			entries: ["/projects/downdetector","/"],
 			handleHttpError : "ignore"
 		}
 	}
