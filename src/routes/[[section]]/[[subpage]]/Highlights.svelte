@@ -24,7 +24,7 @@
     </HighlightPanel>
     <HighlightPanel>
         <span slot = "title">
-            College Curriculum Development
+            College Curriculum Developer
         </span>
         <div slot="body"> 
             As freshmen, my colleague and I co-created 2 units of curriculum for Sonoma State University's Computer Applications for Scientists (PHYS 381). PHYS 381 is currently a mandatory upper-division class for Physics majors.
