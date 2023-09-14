@@ -1,6 +1,6 @@
 {
     "name" : "DFA Research",
-    "desc" : "Researching linear-time solutions to otherwise exponential-time problems via procedural DFA generation",
+    "desc" : "Researching linear-time solutions to otherwise exponential-time problems via procedural DFA generation.",
     "location" : "ssu",
     "date" : {
         "start" : "2023-01-23",

@@ -10,7 +10,7 @@ Current performance stats:
 - 98% of boards solved via linear-time method (completely skipping any BFS)
 - Never exceeded 40mb of RAM in the process
 
-Solutions I've builtto solve this challenge (all in Rust):
+Solutions I've built to solve this challenge (all made in Rust):
 
 1. Brute force BFS starting from a particular board
     * A multithreaded implementation of the same

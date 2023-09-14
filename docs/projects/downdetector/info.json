@@ -1,6 +1,6 @@
 {
     "name" : "Down Detector",
-    "desc" : "System using MySQL and Python to find outages throughout LSA",
+    "desc" : "System using MySQL and Python to find outages throughout LSA.",
     "location" : "lsa",
     "date" : {
         "start" : "2021-06-21",
