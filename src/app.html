@@ -8,15 +8,30 @@
 		%sveltekit.head%
 	</head>
 
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-7V9EXZ8HHS"></script>
 	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-
-	gtag('config', 'G-7V9EXZ8HHS');
-	</script>
+		(function(h,o,u,n,d) {
+		  h=h[d]=h[d]||{q:[],onReady:function(c){h.q.push(c)}}
+		  d=o.createElement(u);d.async=1;d.src=n
+		  n=o.getElementsByTagName(u)[0];n.parentNode.insertBefore(d,n)
+		})(window,document,'script','https://www.datadoghq-browser-agent.com/us1/v5/datadog-rum.js','DD_RUM')
+		window.DD_RUM.onReady(function() {
+		  window.DD_RUM.init({
+			clientToken: 'pub6f173bfd37cc04a732f853ebced59367',
+			applicationId: 'e74f0de0-abae-40a4-b7f0-cddc2ab8adb1',
+			site: 'datadoghq.com',
+			service: 'demi-rs',
+			env: 'personal',
+			// Specify a version number to identify the deployed version of your application in Datadog
+			// version: '1.0.0', 
+			sessionSampleRate: 100,
+			sessionReplaySampleRate: 100,
+			trackUserInteractions: true,
+			trackResources: true,
+			trackLongTasks: true,
+			defaultPrivacyLevel: 'allow',
+		  });
+		})
+	  </script>
 
 	<body data-sveltekit-preload-data="hover" class = "bg-black text-slate-50 py-10" >
 		<!--<img src="background.svg" style="width:100%; z-index: -100; position: absolute; transform: translateZ(-10px); filter: blur(4px); opacity: 0.4;"> -->

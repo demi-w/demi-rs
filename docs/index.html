@@ -8,24 +8,39 @@
 		
 		<link href="./_app/immutable/assets/0.f7d78cd8.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/2.8f9adda4.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/entry/start.8828a4dd.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.87bfc7a2.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.d2529aa8.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.d7f5f825.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/app.fe7c5bb4.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.137c2741.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.43bf08d5.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/index.61e6f54d.js">
 		<link rel="modulepreload" href="./_app/immutable/nodes/0.a65aca46.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/2.ebc63761.js"><!-- HEAD_svelte-1ft6mva_START --><meta property="title" content="Demi Willison's Portfolio Site"> <meta property="description" content="Isn't she so eminently cool and hirable?"> <meta property="image" content="https://demi.rs/locations/me/banner.png"> <meta property="og:title" content="Demi Willison's Portfolio Site"> <meta property="og:description" content="Isn't she so eminently cool and hirable?"> <meta property="og:image" content="https://demi.rs/locations/me/banner.png"><!-- HEAD_svelte-1ft6mva_END -->
+		<link rel="modulepreload" href="./_app/immutable/nodes/2.647b58c2.js"><!-- HEAD_svelte-1ft6mva_START --><meta property="title" content="Demi Willison's Portfolio Site"> <meta property="description" content="Isn't she so eminently cool and hirable?"> <meta property="image" content="https://demi.rs/locations/me/banner.png"> <meta property="og:title" content="Demi Willison's Portfolio Site"> <meta property="og:description" content="Isn't she so eminently cool and hirable?"> <meta property="og:image" content="https://demi.rs/locations/me/banner.png"><!-- HEAD_svelte-1ft6mva_END -->
 	</head>
 
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-7V9EXZ8HHS"></script>
 	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-
-	gtag('config', 'G-7V9EXZ8HHS');
-	</script>
+		(function(h,o,u,n,d) {
+		  h=h[d]=h[d]||{q:[],onReady:function(c){h.q.push(c)}}
+		  d=o.createElement(u);d.async=1;d.src=n
+		  n=o.getElementsByTagName(u)[0];n.parentNode.insertBefore(d,n)
+		})(window,document,'script','https://www.datadoghq-browser-agent.com/us1/v5/datadog-rum.js','DD_RUM')
+		window.DD_RUM.onReady(function() {
+		  window.DD_RUM.init({
+			clientToken: 'pub6f173bfd37cc04a732f853ebced59367',
+			applicationId: 'e74f0de0-abae-40a4-b7f0-cddc2ab8adb1',
+			site: 'datadoghq.com',
+			service: 'demi-rs',
+			env: 'personal',
+			// Specify a version number to identify the deployed version of your application in Datadog
+			// version: '1.0.0', 
+			sessionSampleRate: 100,
+			sessionReplaySampleRate: 100,
+			trackUserInteractions: true,
+			trackResources: true,
+			trackLongTasks: true,
+			defaultPrivacyLevel: 'allow',
+		  });
+		})
+	  </script>
 
 	<body data-sveltekit-preload-data="hover" class = "bg-black text-slate-50 py-10" >
 		<!--<img src="background.svg" style="width:100%; z-index: -100; position: absolute; transform: translateZ(-10px); filter: blur(4px); opacity: 0.4;"> -->
@@ -50,7 +65,7 @@ pure JS and WebGL canvas. In doing so, I signed myself up for the common folly o
 			
 			<script>
 				{
-					__sveltekit_1n13xps = {
+					__sveltekit_wb48ya = {
 						base: new URL(".", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -60,8 +75,8 @@ pure JS and WebGL canvas. In doing so, I signed myself up for the common folly o
 					const data = [null,{"type":"data","data":{},"uses":{"params":["section","then",null]}}];
 
 					Promise.all([
-						import("./_app/immutable/entry/start.8828a4dd.js"),
-						import("./_app/immutable/entry/app.fe7c5bb4.js")
+						import("./_app/immutable/entry/start.87bfc7a2.js"),
+						import("./_app/immutable/entry/app.43bf08d5.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 2],
